@@ -248,6 +248,39 @@ h2 {
   object-fit: cover;
 }
 
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.figure-grid figure {
+  margin: 0;
+}
+
+.figure-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.figure-grid-uniform img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #fff;
+}
+
+.project-card .thumb-contain {
+  background: #e8e8ea;
+}
+
+.project-card .thumb-contain img {
+  object-fit: contain;
+}
+
 .project-hero-image {
   display: block;
   width: 100%;

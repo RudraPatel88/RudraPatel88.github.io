@@ -26,8 +26,12 @@ undergrad, to showcase projects to engineering/consulting firms.
 ## Pages needed
 - Home
 - Projects (individual project write-ups)
-- About
-- Resume
+- About (removed then restored 2026-11-04; its intro paragraph was
+  deleted at the user's request - keep it without that paragraph)
+- Resume (page content follows the user's current resume but with the
+  "May 2030" grad date removed; assets/resume/resume.pdf was replaced
+  with the user's current resume, which still shows "May 2030" - the user
+  chose to publish it that way)
 - Contact
 
 ## Content
@@ -36,7 +40,28 @@ undergrad, to showcase projects to engineering/consulting firms.
   changes)
 - Contact email: rudrap@engineering.upenn.edu (used site-wide, not the
   personal gmail)
-- 3 real projects: "Charge Robotics FRC Team 2722 - Positional and
+- Added 2026-11-04: Laser Cut Lighthouse (projects/laser-cut-lighthouse.html,
+  assets/images/lighthouse-collage.jpg) and Fidget Spinner (projects/
+  fidget-spinner.html, assets/images/fidget-spinner.jpg; spinner was
+  cut out of the desk photo and placed on a studio gradient), both MEAM
+  1010. Nozzle project renamed "Penn Jet Propulsion Nozzle Design" and
+  now includes CFD (Ansys Fluent) images/results. Lighthouse and spinner
+  pages now have a "CAD Model" section (assets/images/*-cad.png). Piston
+  CAD Model (projects/piston-cad-model.html, MEAM 1010, tolerancing the
+  fit of the pistons) added too. Only PennAiR XFLR5 aero analysis is
+  still missing from the user's list (aero optimization deferred by user).
+  Charge Robotics PID page has a "Subsystems" gallery (9 CAD renders
+  cropped from the 2024/2025/2026 technical binders via Windows' built-in
+  PDF renderer; assets/images/robot-*.jpg). User said NOT to use the team
+  photo and NOT to link the technical binders - keep it that way. Process
+  text says PID tuned "five end effectors".
+- Projects are being expanded (2026-11-04): SAE Aero Design Micro Class
+  Plane (projects/micro-class-plane.html, image assets/images/
+  micro-class-plane.webp, tagged PennAiR) is deliberately listed FIRST in
+  the Projects grid and on the homepage. Still to add: MEAM 1010 piston
+  CAD, MEAM 1010 laser cut lighthouse, PennAiR XFLR5 aero analysis, and
+  CFD added to the nozzle page (user will send descriptions/images)
+- 3 earlier real projects: "Charge Robotics FRC Team 2722 - Positional and
   Velocity PID Controllers" (projects/pid-controllers.html) and
   Residential Light Usage Tracker
   (projects/residential-light-usage-tracker.html), both from the resume;

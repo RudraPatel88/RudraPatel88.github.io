@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Penn Jet Propulsion Nozzle Design Challenge - Rudra Patel</title>
+  <title>Penn Jet Propulsion Nozzle Design - Rudra Patel</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -23,7 +23,7 @@
   <main>
     <div class="page-header container">
       <span class="label">// project</span>
-      <h1>Penn Jet Propulsion Nozzle Design Challenge</h1>
+      <h1>Penn Jet Propulsion Nozzle Design</h1>
       <p>
         An internal design challenge to CAD a nozzle within a fixed set of
         constraints and a materials budget - finishing top 3 while using
@@ -33,6 +33,8 @@
         <li>CAD</li>
         <li>SolidWorks</li>
         <li>FEA</li>
+        <li>CFD</li>
+        <li>Ansys Fluent</li>
       </ul>
       <img class="project-hero-image" src="../assets/images/nozzle-collage.png" alt="SolidWorks render of the nozzle next to its von Mises stress analysis" />
     </div>
@@ -44,7 +46,7 @@
           As part of an internal nozzle design challenge with Penn Jet
           Propulsion, I had to design a nozzle in CAD that met a set of
           engineering constraints while staying within a fixed materials
-          budget.
+          budget. I analyzed the design with both FEA and CFD.
         </p>
       </div>
     </section>
@@ -66,11 +68,53 @@
 
     <section>
       <div class="container">
+        <h2>CFD Analysis</h2>
+        <p class="muted">
+          In addition to the structural FEA, I ran a CFD simulation of the
+          nozzle in Ansys Fluent. I extracted the flow volume from the CAD
+          model in SpaceClaim, meshed it and checked mesh quality using
+          skewness statistics, then applied pressure inlet and pressure
+          outlet boundary conditions and solved the flow.
+        </p>
+        <div class="figure-grid">
+          <figure>
+            <img src="../assets/images/nozzle-cfd-domain.png" alt="Flow volume extracted around the nozzle in SpaceClaim" />
+            <figcaption class="image-caption">Flow volume extracted in SpaceClaim</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/nozzle-cfd-mesh.png" alt="Mesh of the nozzle flow volume colored by skewness" />
+            <figcaption class="image-caption">Mesh of the flow volume</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/nozzle-cfd-pressure.png" alt="Static pressure contour through the nozzle" />
+            <figcaption class="image-caption">Static pressure contour</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/nozzle-cfd-velocity.png" alt="Velocity magnitude contour through the nozzle" />
+            <figcaption class="image-caption">Velocity magnitude contour</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/nozzle-cfd-streamlines-side.png" alt="3D velocity streamlines through the nozzle, side view" />
+            <figcaption class="image-caption">3D velocity streamlines, side view</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/nozzle-cfd-streamlines-front.png" alt="3D velocity streamlines through the nozzle, front view" />
+            <figcaption class="image-caption">3D velocity streamlines, front view</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
         <h2>Results</h2>
         <p class="muted">
           The final design finished top 3 in the challenge, using roughly
           33% of the available budget while maintaining a high factor of
-          safety given the stress for the competition.
+          safety given the stress for the competition. The CFD results
+          showed the flow accelerating through the nozzle's contraction,
+          with static pressure dropping across it and an area-weighted
+          average outlet velocity of about 164 m/s.
         </p>
       </div>
     </section>
