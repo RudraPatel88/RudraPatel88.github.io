@@ -5,92 +5,93 @@ Personal engineering portfolio site for a UPenn mechanical engineering
 undergrad, to showcase projects to engineering/consulting firms.
 
 ## Hosting
-- GitHub Pages, free, no domain fees
+- GitHub Pages, free, LIVE at https://rudrapatel88.github.io (deploys from
+  `main` / root on every push)
 - Repo is named `<username>.github.io` (exact match required for
   GitHub to auto-serve it)
 - No custom domain for now
 
 ## Tech stack
-- Plain HTML/CSS/JS — no framework, no build step
-- Chosen over a static site generator (Astro/Next.js) because the
-  site is small (~5-10 project pages) and I want full control over
-  a custom, non-templated design rather than framework defaults
+- Plain HTML/CSS/JS - no framework, no build step
+- Chosen over a static site generator because the site is small and I want
+  full control over a custom, non-templated design
 
 ## Design direction
 - Permanent dark mode: black background (#0a0a0b), off-white text,
-  warm orange accent (#e2793f) — no light theme
+  warm orange accent (#e2793f) - no light theme
 - Monospace accents for nav/labels/tags ("// section" motif), sans-serif
   for body copy
 - Deliberate and custom, not a generic portfolio template
 
-## Pages needed
-- Home
-- Projects (individual project write-ups)
-- About (removed then restored 2026-11-04; its intro paragraph was
-  deleted at the user's request - keep it without that paragraph)
-- Resume (page content follows the user's current resume but with the
-  "May 2030" grad date removed; assets/resume/resume.pdf was replaced
-  with the user's current resume, which still shows "May 2030" - the user
-  chose to publish it that way)
+## Rules to keep
+- NO em dashes anywhere on the site (user removed them all); use hyphens
+- Contact email/phone are obfuscated (base64 in `data-email`/`data-phone`,
+  decoded by js/main.js) so scrapers can't read them - never write them as
+  plain text in HTML
+- Do NOT use the Charge Robotics team photo, and do NOT link or publish the
+  technical binders/PDFs (only cropped CAD images from them are used)
+- Do NOT regenerate a Three.js render from the nozzle STL (user rejected it
+  2026-09-15); nozzle images are the user's own SolidWorks/Ansys exports
+- Only state facts the user gave; no invented numbers or results
+- Reuse existing CSS classes (`project-card`, `tag-list`, `figure-grid`,
+  `project-hero-image`, `project-body-image`, `image-caption`)
+
+## Pages
+- Home: headline "Interested in aerospace, propulsion, robotics, and
+  integrated systems"; "Recent work" shows 4 featured cards (plane, PID,
+  capstone, nozzle)
+- Projects (index of all cards; SAE Micro Class Plane is deliberately FIRST)
+- About (intro paragraph deleted at user's request - keep it that way)
+- Resume (Education + Skills + languages/interests following the user's
+  current resume; NO graduation date in page text; Experience/Leadership
+  sections intentionally omitted)
 - Contact
 
-## Content
-- Resume PDF at /assets/resume/resume.pdf (uploaded; contact info and
-  resume.html content are sourced from it — update both if the resume
-  changes)
-- Contact email: rudrap@engineering.upenn.edu (used site-wide, not the
-  personal gmail)
-- Added 2026-11-04: Laser Cut Lighthouse (projects/laser-cut-lighthouse.html,
-  assets/images/lighthouse-collage.jpg) and Fidget Spinner (projects/
-  fidget-spinner.html, assets/images/fidget-spinner.jpg; spinner was
-  cut out of the desk photo and placed on a studio gradient), both MEAM
-  1010. Nozzle project renamed "Penn Jet Propulsion Nozzle Design" and
-  now includes CFD (Ansys Fluent) images/results. Lighthouse and spinner
-  pages now have a "CAD Model" section (assets/images/*-cad.png). Piston
-  CAD Model (projects/piston-cad-model.html, MEAM 1010, tolerancing the
-  fit of the pistons) added too. Only PennAiR XFLR5 aero analysis is
-  still missing from the user's list (aero optimization deferred by user).
-  Charge Robotics PID page has a "Subsystems" gallery (9 CAD renders
-  cropped from the 2024/2025/2026 technical binders via Windows' built-in
-  PDF renderer; assets/images/robot-*.jpg). User said NOT to use the team
-  photo and NOT to link the technical binders - keep it that way. Process
-  text says PID tuned "five end effectors".
-- Projects are being expanded (2026-11-04): SAE Aero Design Micro Class
-  Plane (projects/micro-class-plane.html, image assets/images/
-  micro-class-plane.webp, tagged PennAiR) is deliberately listed FIRST in
-  the Projects grid and on the homepage. Still to add: MEAM 1010 piston
-  CAD, MEAM 1010 laser cut lighthouse, PennAiR XFLR5 aero analysis, and
-  CFD added to the nozzle page (user will send descriptions/images)
-- 3 earlier real projects: "Charge Robotics FRC Team 2722 - Positional and
-  Velocity PID Controllers" (projects/pid-controllers.html) and
-  Residential Light Usage Tracker
-  (projects/residential-light-usage-tracker.html), both from the resume;
-  plus Penn Jet Propulsion Nozzle Design Challenge
-  (projects/nozzle-design-challenge.html), added directly (not on resume)
-- Photos/renders/CAD screenshots still needed for the other 2 projects —
-  drop in /assets/images and reference from the relevant project page
-  (placeholders marked "image placeholder" / commented-out <img>
-  examples in each file)
-- Nozzle Design Challenge project has real images: assets/images/
-  nozzle-collage.png (SolidWorks-exported render + FEA stress plot, side
-  by side — used as the card thumbnail everywhere and the project page
-  hero image) and nozzle-render.png (the standalone render, used in the
-  Process section). Both are the user's own SolidWorks-exported images,
-  not a generated render — a Three.js render from the raw STL was tried
-  once (2026-09-15) but the user didn't like the look and asked for it
-  to be reverted, so don't regenerate that approach without asking first
+## Projects (projects/*.html, images in assets/images/)
+- micro-class-plane (PennAiR, SAE Aero Design Micro Class, SolidWorks)
+- pid-controllers (Charge Robotics FRC Team 2722; "Subsystems" gallery of 9
+  CAD renders cropped from the 2024/2025/2026 binders; text says PID tuned
+  "five end effectors")
+- residential-light-usage-tracker (capstone; images/results from the poster
+  and slideshow)
+- nozzle-design-challenge (Penn Jet Propulsion, tags incl. PJP; FEA + CFD
+  with Ansys Fluent images; title is "Penn Jet Propulsion Nozzle Design")
+- piston-cad-model, laser-cut-lighthouse, fidget-spinner (MEAM 1010)
+- project-template.html is a blank starter for new projects
+
+## Content notes
+- Resume PDF at assets/resume/resume.pdf is the user's current resume and
+  still shows "May 2030" (user chose to publish it that way)
+- Contact email used site-wide: rudrap@engineering.upenn.edu
+
+## To-do (next session)
+- Add PennAiR XFLR5 aero analysis project (user deferred it; resume says:
+  co-designed a monoplane in XFLR5 for Micro Class, 5+ design iterations,
+  static stability improved 2.6x, battery/motor thrust simulation). Ask the
+  user for screenshots/plots and details first
+- Charge Robotics: unused material the user supplied - `Coral Scoring
+  360.webm` video, elevator/wrist/elevator-wrist drawing PDFs (E:\Laptop
+  Backup), and 2025 binder PID text (elevator/wrist setpoints, tuning kP
+  with the "plug and chug" method). Ask before using any of it
+- Resolve discrepancy: resume says "4+ end effectors", site says "five"
+- Penn Jet Propulsion flap thrust vectoring work (on resume) is not on the
+  site yet
+- Plane page has one image and no results; piston/lighthouse/spinner pages
+  have only an overview and CAD image (dimensions/tolerances/etc. optional)
+- Lighthouse photos have a cluttered background (clear acrylic can't be cut
+  out); a cleaner photo or CAD render would look better
+- If the user exports a resume PDF without the grad date, replace
+  assets/resume/resume.pdf
 
 ## Workflow
-- Using GitHub Desktop for git (commit/push) — Claude Code should
-  focus on file edits; I'll handle git through the GUI unless I ask
-  you to run git commands directly
-- No Python/Node installed on this machine, so local preview uses
-  .claude/static-server.ps1 (a small HttpListener-based static file
-  server) via .claude/launch.json — swap for `python -m http.server`
-  if Python/Node get installed later
-
-## Current status
-Site structure and dark-mode design in place; real content filled in
-for about/resume/contact/projects from the uploaded resume. Still
-placeholder: project photos/renders/CAD screenshots (images), and the
-2nd/Nth project beyond the two from the resume if more get added.
+- User asks me to commit/push directly. `git` is not on PATH; use GitHub
+  Desktop's bundled git: C:\Users\rudra\AppData\Local\GitHubDesktop\
+  app-3.6.5\resources\app\git\cmd\git.exe (path may change if Desktop
+  updates). Push works without prompts now
+- No Python/Node on this machine, so local preview uses
+  .claude/static-server.ps1 via .claude/launch.json (preview_start name
+  "static-site", http://localhost:8000)
+- PDFs can't be read as images by the Read tool here; Windows' built-in
+  PDF renderer (Windows.Data.Pdf via PowerShell) works for converting pages
+- When editing HTML via PowerShell, read/write as UTF-8 explicitly to avoid
+  mojibake
