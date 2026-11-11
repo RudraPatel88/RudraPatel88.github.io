@@ -61,9 +61,8 @@ undergrad, to showcase projects to engineering/consulting firms.
 - project-template.html is a blank starter for new projects
 
 ## Content notes
-- Resume PDF at assets/resume/resume.pdf still exists in the repo (and is
-  reachable by direct URL) but is no longer linked from the site; it shows
-  "May 2030"
+- The resume PDF was deleted from the site on 2026-11-11 (user wants no
+  resume download of any kind); do not re-add assets/resume/ or link a PDF
 - Contact email used site-wide: rudrap@engineering.upenn.edu
 
 ## To-do (next session)
@@ -82,8 +81,6 @@ undergrad, to showcase projects to engineering/consulting firms.
   have only an overview and CAD image (dimensions/tolerances/etc. optional)
 - Lighthouse photos have a cluttered background (clear acrylic can't be cut
   out); a cleaner photo or CAD render would look better
-- If the user exports a resume PDF without the grad date, replace
-  assets/resume/resume.pdf
 
 ## Workflow
 - User asks me to commit/push directly. `git` is not on PATH; use GitHub
