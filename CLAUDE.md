@@ -41,10 +41,11 @@ undergrad, to showcase projects to engineering/consulting firms.
   integrated systems"; "Recent work" shows 4 featured cards (plane, PID,
   capstone, nozzle)
 - Projects (index of all cards; SAE Micro Class Plane is deliberately FIRST)
-- About (intro paragraph deleted at user's request - keep it that way)
-- Resume (Education + Skills + languages/interests following the user's
-  current resume; NO graduation date in page text; Experience/Leadership
-  sections intentionally omitted)
+- About (merged with the old Resume page on 2026-11-11: Background,
+  Education, Skills & tools, Outside the lab; skills/languages/interests
+  follow the user's resume; NO graduation date in page text;
+  Experience/Leadership intentionally omitted). There is no separate Resume
+  page and NO resume download button/nav link - keep it that way
 - Contact
 
 ## Projects (projects/*.html, images in assets/images/)
@@ -60,8 +61,9 @@ undergrad, to showcase projects to engineering/consulting firms.
 - project-template.html is a blank starter for new projects
 
 ## Content notes
-- Resume PDF at assets/resume/resume.pdf is the user's current resume and
-  still shows "May 2030" (user chose to publish it that way)
+- Resume PDF at assets/resume/resume.pdf still exists in the repo (and is
+  reachable by direct URL) but is no longer linked from the site; it shows
+  "May 2030"
 - Contact email used site-wide: rudrap@engineering.upenn.edu
 
 ## To-do (next session)
